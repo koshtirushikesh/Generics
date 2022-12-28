@@ -9,17 +9,17 @@ namespace Generics
     internal class MaxNumber
     {
         
-        internal static int FindMaxNumber(int firstValue, int secondValue, int ThirdValue)
+        internal static float FindMaxNumber(float FirstValue, float secondValue, float ThirdValue)
         {
-            if (firstValue.CompareTo(secondValue)> 0 && firstValue.CompareTo(ThirdValue)>0)
+            if (FirstValue.CompareTo(secondValue)> 0 && FirstValue.CompareTo(ThirdValue)>0)
             {
-                return firstValue;
+                return FirstValue;
             }
-            if(secondValue.CompareTo(firstValue)>0 && secondValue.CompareTo(ThirdValue)>0)
+            if(secondValue.CompareTo(FirstValue)>0 && secondValue.CompareTo(ThirdValue)>0)
             {
                 return secondValue;
             }
-            if(ThirdValue.CompareTo(firstValue)>0 && ThirdValue.CompareTo(secondValue)>0)
+            if(ThirdValue.CompareTo(FirstValue)>0 && ThirdValue.CompareTo(secondValue)>0)
             {
                 return ThirdValue;
             }
