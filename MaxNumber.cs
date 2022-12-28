@@ -9,7 +9,7 @@ namespace Generics
     internal class MaxNumber
     {
         
-        internal static float FindMaxNumber(float FirstValue, float secondValue, float ThirdValue)
+        internal static string FindMaxNumber(string FirstValue, string secondValue, string ThirdValue)
         {
             if (FirstValue.CompareTo(secondValue)> 0 && FirstValue.CompareTo(ThirdValue)>0)
             {

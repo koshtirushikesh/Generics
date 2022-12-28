@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Generics
 {
@@ -6,7 +8,7 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(MaxNumber.FindMaxNumber((float)30.30, (float)10.10, (float)20.20));
+            Console.WriteLine(MaxNumber.FindMaxNumber("Banana", "Apple", "Peach"));
         }
     }
 }
