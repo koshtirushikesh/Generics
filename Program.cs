@@ -5,8 +5,9 @@ namespace Generics
     {
         static void Main(string[] args)
         {
-            MaxNumber<int> maxNumber = new MaxNumber<int>(20,30,40);
-            Console.WriteLine(maxNumber.PrintMaxMethod());
+            int[] Arr = {10,20,60,40,300};
+            MaxNumber<int> maxNumber = new MaxNumber<int>(Arr);
+            maxNumber.PrintMaxMethod();
         }
     }
 }

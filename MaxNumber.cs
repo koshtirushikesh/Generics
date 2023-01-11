@@ -6,37 +6,31 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    internal class MaxNumber<T> where T : IComparable
+    internal class MaxNumber<T>
     {
-        public T FirstValue,SecondValue,ThirdValue;
-        public MaxNumber(T FirstValue, T SecondValue, T ThirdValue) 
+        public T[] values;
+
+        public MaxNumber(T[] values) 
         {
-            this.FirstValue = FirstValue;
-            this.SecondValue = SecondValue;
-            this.ThirdValue = ThirdValue;
+            this.values = values;
         }
 
-        internal static T FindMaxNumber(T FirstValue, T SecondValue, T ThirdValue) 
+        public static T[]  sort(T[] values)
         {
-            if (FirstValue.CompareTo(SecondValue) > 0 && FirstValue.CompareTo(ThirdValue) > 0)
-            {
-                return FirstValue;
-            }
-            if(SecondValue.CompareTo(FirstValue)>0 && SecondValue.CompareTo(ThirdValue)>0)
-            {
-                return SecondValue;
-            }
-            if(ThirdValue.CompareTo(FirstValue)>0 && ThirdValue.CompareTo(SecondValue)>0)
-            {
-                return ThirdValue;
-            }
-            throw new Exception("all tha values are same");
+            Array.Sort(values);
+            return values;
         }
 
-        public T PrintMaxMethod()
+        internal static T FindMaxNumber(params T[] values ) 
         {
-            T Max = MaxNumber<T>.FindMaxNumber(this.FirstValue, this.SecondValue, this.ThirdValue);
-            return Max;
+            T[] sortedArray = sort(values);
+            return sortedArray[^1];
+        }
+
+        public void PrintMaxMethod()
+        {
+            var Max= FindMaxNumber(this.values);
+            Console.WriteLine("this is the max value: " + Max);
         }
     }
 }
